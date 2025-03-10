@@ -12,7 +12,7 @@ router.post('/register',route.postregister);
 
 router.get('/check-helmet', (req, res) => {
     res.json({
-        headers: res.getHeaders() // Get all response headers
+        headers: res.getHeaders() 
     });
 });
 

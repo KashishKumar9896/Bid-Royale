@@ -27,11 +27,6 @@ app.use(cors());
 const routes = require('./routes/route');
 app.use('/', routes);
 
-// Log requests using a direct console log instead of middleware
-app.use((req, res, next) => {
-    console.log(chalk.cyan(`[${new Date().toISOString()}] ${req.method} ${req.url}`)); // Log each request
-    next();
-});
 
 
 // Route not found handler
