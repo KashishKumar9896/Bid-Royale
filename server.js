@@ -23,6 +23,14 @@ app.use(helmet());
 const cors = require('cors');
 app.use(cors());
 
+const rateLimit = require('express-rate-limit');
+const limiter = rateLimit({
+    windowMs: 1 * 60 * 1000, 
+    max: 3, // Limit each IP to 100 requests per window
+    message: 'Too many requests, please try again later.',
+});
+app.use(limiter);
+
 
 const routes = require('./routes/route');
 app.use('/', routes);
