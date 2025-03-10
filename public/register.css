@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body {
+    /* background: linear-gradient(135deg, #6e7dff, #5f55f1); */
+    background-image: url(back.jpg.jpg);
+    /* background-color: #0ca484; */
+    /* background-color: #1edbd4; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 115vh;
+    width: 100%;
+}
+
+.form-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 40px 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* text-align: center; */
+    height: 80%;
+    width: 100%;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+    background-color: white;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-weight: 600;
+    color: #1edbd4;
+    /* color: #0ca484; */
+}
+h3{
+    color: #1edbd4;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-weight: 800;
+    font-size: 16px;
+    /* color: #fff; */
+    color: #1edbd4;
+    /* color: #0ca484; */
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    /* border: 2px solid rgba(255, 255, 255, 0.6); */
+    border: 2px solid #1edbd4;
+    /* border: 2px solid #0ca484; */
+    border-radius: 5px;
+    font-size: 16px;
+    /* color: #fff; */
+    outline: none;
+    transition: border 0.3s ease, background 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #0ca484;
+    /* border-color: #6e7dff; */
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    /* background: #6e7dff; */
+    background-color: #1edbd4;
+    /* background-color: #0ca484; */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    /* background: #5f55f1; */
+    background-color: #0ca484;
+}
+
+.links {
+    text-align: center;
+    margin-top: 15px;
+    color: #1edbd4;
+    /* color: #0ca484; */
+}
+
+.links a {
+    /* color: #fff; */
+    font-weight: bold;
+    color: #1edbd4;
+    /* color: #0ca484; */
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    /* color: #6e7dff; */
+    /* color: #1edbd4; */
+    color: #0ca484;
+}
+
+/* Error Message Styling */
+#error-message {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .form-box {
+        width: 90%;
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}

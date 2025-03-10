@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+                
+                <h3>OR</h3><br>
+                <div class="textbox">
+                    <input type="text" placeholder="Username" name="uname" >
+                </div>
+                <div class="textbox">
+                    <input type="password" placeholder="Password" name="upwd" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="links">
+                    <a href="#">Forgot Password?</a> | 
+                    <a href="./register.html">Create an Account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

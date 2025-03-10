@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-box">
+            <h2>Register</h2>
+                <form method="post" action="/register">
+                <!-- Name Input -->
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="uname" name="uname" placeholder="Enter your full name" required>
+                </div>
+
+                <!-- Email Input -->
+                
+
+                <!-- Password Input -->
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="upwd" name="upwd" placeholder="Enter your password" required>
+                </div>
+
+                <!-- Confirm Password Input -->
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn">Register</button>
+
+                <!-- Error Message -->
+                <div id="error-message" style="color: red; display: none;">
+                    Passwords do not match!
+                </div>
+
+                <!-- Link to Login -->
+                <div class="links">
+                    <p>Already have an account? <a href="./login.html">Login here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>
