@@ -10,4 +10,12 @@ router.get('/register',route.getregister);
 router.post('/login',route.postlogin);
 router.post('/register',route.postregister);
 
+router.get('/check-helmet', (req, res) => {
+    res.json({
+        headers: res.getHeaders() // Get all response headers
+    });
+});
+
+
+
 module.exports = router;
