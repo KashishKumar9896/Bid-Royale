@@ -29,7 +29,9 @@
             <div class="navbar-2">
                 <a class="login" id="loginLink" href="./login.html">Login</a>
                 <span id="username"></span>    
-                <button class="dark"><i class="fa-regular fa-moon"></i></button>
+                <!-- <button class="dark"><i class="fa-regular fa-moon"></i></button> -->
+                <button class="dark">🌙</button>
+
                 <a class="shop" href=""><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </div>
@@ -386,22 +388,7 @@
                 </div>
             </div>
         </footer>
-        <script>
-            // Get the username from the URL
-            const params = new URLSearchParams(window.location.search);
-            const user = params.get('user');
-    
-            if (user) {
-    // Display just the username in the span
-    document.getElementById('username').textContent = user;
-    // Hide the login link with class 'login'
-    document.querySelector('.login').style.display = 'none';
-} else {
-    // Maybe clear the username section and show login if no user is present
-    document.getElementById('username').textContent = '';
-    document.querySelector('.login').style.display = 'inline'; // Show login link if no user is logged in
-}
-        </script>
+        
         <script src="main.js"></script>
         </body>
 
