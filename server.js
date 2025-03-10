@@ -28,8 +28,8 @@ app.use(cors());
 
 const rateLimit = require('express-rate-limit');
 const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100, // Limit each IP to 100 requests per windowMs
+    windowMs: 15 * 60 * 1000, 
+    max: 100, 
     message: 'Too many requests from this IP, please try again later',
 });
 app.use(limiter);
@@ -55,7 +55,7 @@ app.use((req, res) => {
 });
 
 // Server Startup
-const PORT = 8080;
+const PORT = 8090;
 app.listen(PORT, () => {
     console.log(chalk.green(`Server is running at http://localhost:${PORT}`)); // Use chalk for a colored server start log
 });
