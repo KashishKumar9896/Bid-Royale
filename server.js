@@ -14,11 +14,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 const usersFile = path.join(__dirname, 'user.json');
 
-const routes = require('./routes/route');
-app.use('/', routes);
-
 const morgan = require('morgan');
 app.use(morgan('combined'));
+
+const routes = require('./routes/route');
+app.use('/', routes);
 
 const helmet = require('helmet');
 app.use(helmet());
@@ -26,21 +26,6 @@ app.use(helmet());
 const cors = require('cors');
 app.use(cors());
 
-const rateLimit = require('express-rate-limit');
-const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, 
-    max: 100, 
-    message: 'Too many requests from this IP, please try again later',
-});
-app.use(limiter);
-
-// Example route with async handler
-const asyncHandler = require('express-async-handler');
-app.get('/users', asyncHandler(async (req, res, next) => {
-    const users = await getUsersFromDB(); // Example async function
-    console.log(chalk.blue(`Fetched ${users.length} users`)); // Log how many users were fetched
-    res.json(users);
-}));
 
 // Log requests using a direct console log instead of middleware
 app.use((req, res, next) => {
